@@ -1280,7 +1280,7 @@ class AdminGUI(object):
         new_address_entry = tkinter.Entry(self.__my_widget, width = 20)
         new_address_entry.pack(side = 'top')
 
-        update_address_button = tkinter.Button(self.__my_widget, text = "Update Address", command = lambda : self.__admin.SetAddress(new_address_entry.get()))
+        update_address_button = tkinter.Button(self.__my_widget, text = "Update Address", command = lambda : self.UpdateAdress(new_address_entry.get()))
         update_address_button.pack(side = 'top')
 
         return_to_dashboard_button = tkinter.Button(self.__my_widget, text = "Return To Dashboard", command = lambda : self.ClearAndReturn())
@@ -1605,7 +1605,7 @@ class DoctorGUI(object):
         appointment_status_label = tkinter.Label(self.__my_widget, text = "Appointment Status: {0}".format(appointment.GetStatus()))
         appointment_status_label.pack(side = 'top')
 
-        appointment_patient_label = tkinter.Label(self.__my_widget, text = "Appointment Patient: {0}".format(appointment.GetDoctor()))
+        appointment_patient_label = tkinter.Label(self.__my_widget, text = "Appointment Patient: {0}".format(appointment.GetPatient()))
         appointment_patient_label.pack(side = 'top')
 
         appointment_dateTime_label = tkinter.Label(self.__my_widget, text = "Appointment Date Time: {0}".format(appointment.GetDateTime()))

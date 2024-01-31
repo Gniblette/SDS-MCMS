@@ -353,6 +353,8 @@ class Doctor:
 
             ids.append(appointment.GetID())
 
+        return ids
+    
     def AddCompleteAppointment(self,appointment):
 
         self.__appointments.append(appointment)
